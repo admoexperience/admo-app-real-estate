@@ -1,0 +1,157 @@
+/*http://css3pie.com/demos/gradient-patterns/*/
+$tracking-plain-human: url(/real-estate/images/shopper.png) !default;
+$tracking-plain-tracker: url(/real-estate/images/shopper.png) !default;
+$positionTrackerBG: yellow;
+
+$plainWidth: 1920px;
+$plainHeight: 800px;
+
+.tracking-plain{
+  width: $plainWidth;
+  left:0px;
+  position: absolute;
+  z-index: 150;
+  bottom:0px;
+  height: $plainHeight;
+  opacity: 1;
+  -webkit-perspective:1000;
+
+
+  .plain{
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: $plainHeight;
+    width: $plainWidth;
+  }
+
+  .container{
+    z-index: 150;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective:2000;
+    -webkit-transform-origin:50% 100%;
+    -webkit-transform: rotateX(45deg);
+
+    -webkit-transition: -webkit-transform 0.5s;
+
+    .tracking-plain-inner{
+      background-color: transparent;
+      z-index: 150;
+
+      .static-object{
+
+        border-style:solid;
+        box-sizing:border-box;
+        border-width:0px;
+        border-color: #1a949b;
+        border-radius:50%;
+        opacity: 1;
+        position: relative;
+        z-index: 151;
+
+        height: 200px;
+        width: 200px;
+
+
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: contain;
+
+        -webkit-animation-name: centerAnimation;
+
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+
+      }
+
+    }
+
+    .overlay-plain{
+      z-index: 160;
+    }
+
+    .grid-plain{
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(24, 111, 155, 0)));
+
+      background-size: 200px 200px, 200px 200px, 50px 50px, 50px 50px;
+      background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+      background-image: -webkit-linear-gradient(rgba(255,255,255,.2) 2px, transparent 2px),
+                        -webkit-linear-gradient(0, rgba(255,255,255,.2) 2px, transparent 2px),
+                        -webkit-linear-gradient(rgba(0255,255,255,.2) 1px, transparent 1px),
+                        -webkit-linear-gradient(0, rgba(255,255,255,.2) 1px, transparent 1px);
+
+      z-index: 155;
+    }
+
+    .shadow-plain{
+      z-index: 156;
+      .text-plain{
+
+        position: absolute;
+        z-index: 156;
+
+        height: 300px;
+        width: $plainWidth;
+        top:550px;
+
+        font-family: 'Verdana', 'Arial', 'sans-serif';
+        font-size: 70pt;
+
+        color: white;
+        text-align: center;
+      }
+    }
+
+    .background-plain{
+      background-color: #24B8BC;
+      z-index: 100;
+    }
+
+    .human-object{
+      background-image: $tracking-plain-human;
+      background-position: center;
+      background-repeat:no-repeat;
+      background-size: contain;
+      opacity: 1;
+      position: absolute;
+      z-index: 1501;
+      left:1000px;
+      top:200px;
+
+      height: 300px;
+      width: 300px;
+
+      -webkit-transition: opacity 0.5s;
+      -webkit-transform-origin:50% 100%;
+      -webkit-transform: rotateX(-35deg);
+
+    }
+
+  }
+}
+
+
+@-webkit-keyframes centerAnimation {
+  0% {
+    opacity: 0;
+    border-width:0px;
+
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+
+  }
+  51% {
+
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    border-width:100px;
+  }
+}

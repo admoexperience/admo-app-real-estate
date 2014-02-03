@@ -1,0 +1,35 @@
+/*Variables*/
+@import "variables";
+
+// VARIABLES - Pre-asigned
+$removeMeIamHereToShowYou: #FFFFFF;
+$font: 'din';
+
+// Screens
+@import "screensaver/screensaver.scss";
+@import "user-vector/user-vector.scss";
+@import "background-photo/background-photo.scss";
+@import "circular-identifier/circular-identifier.scss";
+@import "circular-button/circular-button.scss";
+@import "carousel-tilt/carousel-tilt.scss";
+@import "tracking-plain/tracking-plain.scss";
+@import "back-plain/back-plain.scss";
+@import "guidance-element/guidance-element.scss";
+@import "four-menu/four-menu.scss";
+@import "start-container/start-container.scss";
+@import "menu-container/menu-container.scss";
+
+/*Font*/
+@import "font.scss";
+
+body {
+  font-family: $font;
+}
+
+
+//Sets the back button to white but only on this screen
+.carousel-screen{
+  .circular-button .title .text-start{
+      color: white;
+    }
+  }

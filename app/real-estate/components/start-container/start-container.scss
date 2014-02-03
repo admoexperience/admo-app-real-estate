@@ -1,0 +1,23 @@
+.start-container {
+  font-family: $font;;
+  @include screen-size;
+  position: absolute;
+  z-index: 50;
+  -webkit-transition: top 0.5s;
+
+  .welcome-title{
+    top:150px;
+    left:50px;
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    z-index: 350;
+    background-position: top center;
+    background-repeat:no-repeat;
+    background-image: url(/real-estate/images/3-start/where-reality-becomes-a-home.png);
+    background-size: contain;
+
+    -webkit-transition: top 1s, left 1s, width 1s;
+  }
+
+}

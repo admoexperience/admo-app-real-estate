@@ -1,0 +1,32 @@
+.circular-identifier {
+  position:absolute;
+  @include screen-size;
+  .container{
+    height: 500px;
+    width: 800px;
+
+    position:absolute;
+
+    .hand-arc{
+      position:absolute;
+      width: 800px;
+      height: 500px;
+
+    }
+
+    .text{
+      position:absolute;
+      top:65px;
+      left:240px;
+
+      width: 0px;
+      height: 125px;
+      background-position: left;
+      background-repeat:no-repeat;
+      background-image: url(/real-estate/images/3-start/use-your-hands.png);
+      background-size: cover;
+      opacity: 0;
+    }
+
+  }
+}

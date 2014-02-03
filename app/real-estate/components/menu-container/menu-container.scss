@@ -1,0 +1,20 @@
+.menu-container {
+  @include screen-size;
+  position: absolute;
+  -webkit-transition: left 1s, right 1s, top 0.5s;
+
+  top:-1080px;
+
+  .menu-title{
+    position: absolute;
+    width:1500px;
+    height:200px;
+    left:260px;
+    top:100px;
+
+    background-position: center;
+    background-repeat:no-repeat;
+    background-image: url(/real-estate/images/content/menu-heading.png);
+    background-size: contain;
+  }
+}

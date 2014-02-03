@@ -1,0 +1,12 @@
+.background-photo {
+  position:absolute;
+
+  .container{
+    @include screen-size;
+    z-index:1;
+    background-image: url(/real-estate/images/background.png);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+  }
+}

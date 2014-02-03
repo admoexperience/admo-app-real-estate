@@ -1,0 +1,206 @@
+.carousel-tilt {
+  background-color:black;
+  position:absolute;
+
+  -webkit-transition: opacity 1s;
+  -webkit-transition: top 1s;
+
+  @include screen-size;
+  top:-1080px;
+
+  .frame-container{
+    position:absolute;
+    @include screen-size;
+    -webkit-perspective:1000;
+
+    .frame{
+      z-index: 20;
+      position:absolute;
+      @include screen-size;
+
+      &.left {
+        left:-1920px;
+        -webkit-transform-origin:100% 50%;
+        -webkit-transform: rotateY(90deg);
+
+      }
+      &.middle {
+        left: 0px;
+        -webkit-transform-origin:50% 50%;
+        -webkit-transform: rotateY(0deg);
+
+      }
+      &.right {
+        left:1920px;
+        -webkit-transform-origin:0% 50%;
+        -webkit-transform: rotateY(-90deg);
+
+      }
+
+      .content{
+        position:absolute;
+        @include screen-size;
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: cover;
+      }
+
+      .container{
+        position:absolute;
+        @include screen-size;
+        top:-500px;
+        -webkit-transition: top 1s;
+
+        .text{
+          position:absolute;
+          top:50px;
+          left:1450px;
+          width:400px;
+          height: 220px;
+          //background-color: rgba(0,0,0,0.7);
+          z-index: 50;
+
+          line-height: 120px;
+          position: absolute;
+          font-size: 60px;
+          color: 404041;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .price{
+          position:absolute;
+          top:50px;
+          left:1450px;
+          width:400px;
+          height: 250px;
+          //background-color: rgba(0,0,0,0.7);
+          z-index: 50;
+
+          line-height: 300px;
+          position: absolute;
+          font-size: 65px;
+          color: 404041;
+          text-align: center;
+        }
+
+        .logo{
+          position:absolute;
+          top:0px;
+          left:1400px;
+          width:500px;
+          height: 500px;
+          z-index: 45;
+          background-image: url(/real-estate/images/5-content/banner.png);
+          background-position: top center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+
+
+
+    }
+
+  }
+
+  .animate{
+    -webkit-transition: 1s ease-in-out;
+  }
+
+  .enlarge{
+    -webkit-animation: makeBig 2s;
+  }
+
+  .shift-text{
+    -webkit-animation: textDown 2s;
+  }
+
+  .swipe-container{
+    z-index: 500;
+    @include screen-size;
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.4);
+
+    .hand{
+      position:absolute;
+      top:430px;
+      height:220px;
+      width: 220px;
+      z-index: 25;
+      opacity: 0;
+
+      background-image: url(/real-estate/images/3-start/hand-button.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 50;
+    }
+
+    .area{
+      position:absolute;
+      top:415px;
+      height:250px;
+      left:500px;
+      right:500px;
+      z-index: 25;
+      opacity: 1;
+
+      background-color: rgba(255,255,255,0.3);
+      border-radius: 125px;
+
+      position: absolute;
+      font-size:45px;
+      color: white;
+      text-align: center;
+      line-height: 250px;
+
+    }
+
+    .text{
+      position:absolute;
+      top:260px;
+      height:200px;
+      left:300px;
+      right:300px;
+      z-index: 25;
+      opacity: 1;
+      font-weight: bold;
+      font-size:60px;
+      color: white;
+      text-align: center;
+    }
+
+
+
+  }
+}
+
+@-webkit-keyframes makeBig
+{
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes textDown
+{
+  0% {
+    top:750px;
+  }
+  50% {
+    top:900px;
+  }
+  100% {
+    top:750px;
+  }
+}

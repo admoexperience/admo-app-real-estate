@@ -1,0 +1,153 @@
+.screensaver {
+  background-color:black;
+  position:absolute;
+  opacity: 0;
+
+  -webkit-transition: opacity 1s;
+
+  @include screen-size;
+  .frame-container{
+    position:absolute;
+    @include screen-size;
+    -webkit-perspective:1000;
+
+    .frame{
+      z-index: 20;
+      position:absolute;
+      @include screen-size;
+
+      &.left {
+        left:-1920px;
+        -webkit-transform-origin:100% 50%;
+        -webkit-transform: rotateY(90deg);
+
+      }
+      &.middle {
+        left: 0px;
+        -webkit-transform-origin:50% 50%;
+        -webkit-transform: rotateY(0deg);
+
+      }
+      &.right {
+        left:1920px;
+        -webkit-transform-origin:0% 50%;
+        -webkit-transform: rotateY(-90deg);
+
+      }
+
+      .content-a{
+        position:absolute;
+        @include screen-size;
+        background-image: url(/real-estate/images/content/menu-1/item-1.jpg);
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: cover;
+      }
+
+      .content-b{
+        position:absolute;
+        @include screen-size;
+        background-image: url(/real-estate/images/content/menu-1/item-2.jpg);
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: cover;
+      }
+
+      .content-c{
+        position:absolute;
+        @include screen-size;
+        background-image: url(/real-estate/images/content/menu-1/item-3.jpg);
+        background-position: center;
+        background-repeat:no-repeat;
+        background-size: cover;
+      }
+
+
+
+
+    }
+
+  }
+
+  .fade-container{
+    position:absolute;
+    @include screen-size;
+    z-index: 500;
+
+    .fade{
+      position:absolute;
+      @include screen-size;
+      opacity: 0;
+      background-color: rgba(0,0,0,0.65);
+    }
+    .silhouette{
+      position:absolute;
+      height:500px;
+      right: 625px;
+      top:150px;
+      left: 625px;
+      opacity: 0;
+      background-image: url(/real-estate/images/silhouette.png);
+      background-position: center;
+      background-repeat:no-repeat;
+      background-size: contain;
+
+    }
+
+    .text{
+      height:100px;
+      right: 400px;
+      top:750px;
+      left: 400px;
+      position:absolute;
+      opacity: 1;
+      line-height: 100px;
+      position: absolute;
+      font-size: 70px;
+      color: #FFFFFF;
+      text-align: center;
+      font-weight: bold;
+      opacity: 0;
+
+    }
+
+  }
+
+  .animate{
+    -webkit-transition: 1s ease-in-out;
+  }
+
+  .enlarge{
+    -webkit-animation: makeBig 2s;
+  }
+
+  .shift-text{
+    -webkit-animation: textDown 2s;
+  }
+}
+
+@-webkit-keyframes makeBig
+{
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes textDown
+{
+  0% {
+    top:750px;
+  }
+  50% {
+    top:900px;
+  }
+  100% {
+    top:750px;
+  }
+}

@@ -1,0 +1,68 @@
+
+.guidance-element{
+  @include screen-size;
+  top:0px;
+  left:0px;
+  position: absolute;
+  z-index: 100;
+  .animation {
+    @include screen-size;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .channel{
+    position: absolute;
+    z-index: 250;
+    .inner{
+      background-image: url(/real-estate/images/guide-arrow.png);
+      position: absolute;
+      top:0;
+      background-size: 100% 100%;
+      background-repeat:no-repeat;
+      background-position: center;
+      position: absolute;
+      background-color: transparent;
+      opacity: 1;
+      -webkit-animation: guidance-element-moving 1s linear infinite;
+      z-index: 250;
+    }
+  }
+
+  .line{
+    position: absolute;
+    .fill{
+      z-index: 200;
+      height:100%;
+      position: absolute;
+      background-size: 100% 100%;
+      background-repeat:no-repeat;
+      background-position: center;
+      position: absolute;
+      background-image: url(/real-estate/images/guide-line.png);
+      /*background: -webkit-linear-gradient(right, rgba(255,255,255,0), rgba(255,255,255,1));
+      opacity: 0.5;
+      */
+      /*
+      -webkit-border-top-right-radius: 10px;
+      -webkit-border-bottom-right-radius: 10px;
+      -webkit-animation: pulse-path 1s linear infinite;*/
+    }
+  }
+}
+
+@-webkit-keyframes guidance-element-moving {
+  0% { right: 0%; background-size: 20% 20% }
+  70% { background-size: 100% 100% }
+  100% { right: 100%; background-size: 100% 100% }
+}
+
+@-webkit-keyframes guidance-element-pulse-path {
+  0% { opacity:0.5; }
+  30% { opacity:0; }
+  40% { opacity:0; }
+  60% { opacity:0; }
+  70% { opacity:0; }
+  100% { opacity:0.5; }
+}

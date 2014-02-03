@@ -1,0 +1,86 @@
+.circular-button {
+
+  @include screen-size;
+  position: absolute;
+  z-index: 350;
+  -webkit-transition: left 1s, right 1s, top 0.5s, opacity 0.5s;
+
+
+  .container{
+    @include screen-size;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -webkit-transition: -webkit-transform 0.5s;
+
+    .arc{
+      opacity: 0;
+    }
+    .circle{
+      background-position: center;
+      background-repeat:no-repeat;
+      background-size: 115%;
+    }
+
+    .circle-default{
+      background-size: 74%;
+    }
+
+    .circle-back{
+      background-size: 72%;
+    }
+
+  }
+
+  .size{
+    width:300px;
+    height: 300px;
+    position: absolute;
+  }
+
+  .title{
+    position: absolute;
+
+    .content{
+      position: absolute;
+    }
+
+    .text-default{
+      height:100px;
+      width:400px;
+
+      -webkit-transform: translate(0px,0px);
+      -webkit-transition: -webkit-transform 0.5s;
+
+      line-height: 100px;
+      position: absolute;
+      font-size: 40px;
+      text-align: center;
+      font-family: DIN-Regular;
+
+    }
+
+    .text-start{
+      height:100px;
+      width:300px;
+
+      -webkit-transform: translate(0px,0px);
+      -webkit-transition: -webkit-transform 0.5s;
+
+      line-height: 50px;
+      position: absolute;
+      font-size: 50px;
+      color: #58585B;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .static-positioning{
+    -webkit-transition: left 0.5s, top 0.5s, -webkit-transform 0.5s;
+  }
+
+}
+
+.animate-button-container{
+  -webkit-transition: left 1s, right 1s, top 0.5s;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "real-estate",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "generator-admo": ">= 0.9.2"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
